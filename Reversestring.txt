@@ -1,0 +1,41 @@
+Program for Reverse string
+--------------------------
+Method 1:
+=========
+
+
+int i, n;
+
+char str[6];
+printf("enter string");
+gets(str);
+
+n = strlen(str);
+
+for(i=n-1;i>=0;i--)
+{
+
+ printf(str[i]);
+
+}
+
+
+
+Method 2:
+=========
+
+char inputArray[6] = {"a","b","c","d","e","f"};
+
+int limit = inputArray.length/2;
+
+for(int i=0;i<limit-1;i=i+2)
+{
+
+ char temp=inputArray[i];
+ inputArray[i]=inputArray[n-i-1];
+ inputArray[n-1-i]=temp;
+
+ printf("temp");
+
+}
+
