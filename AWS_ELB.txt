@@ -1,0 +1,43 @@
+			AWS
+
+
+Elastic Load Balancer:
+
+  ELB is the one of the best service in aws resources.ELB automatically distributes incoming application traffic across multiple targets like EC2, ip address and containers in multi AZs. ELB scale up and scale in as traffic to your application changes over time.
+
+Load balancer is used to route incoming requests to multiple EC2 instances.
+
+There are 3 types of ELBs
+
+1. Classic ELB
+2. Application ELB
+3. Network ELB
+
+in market currently classic ELB is using much.
+
+Difference between Application and Network Load balancer
+
+AppELB
+
+1. This will work under layer7.
+
+2. Supports HTTP and HTTPS.
+
+3. COnnection terminated at the load balancer and pooled to the server.
+
+4. Supports content-based routing.
+
+5. Application Load Balancers can perform and report on health checks on a per-port basis. 
+
+Network ELB:
+
+1. This will work under layer4
+
+2. Supports TCP
+
+3. Incoming client connection bound to server connection.
+
+4. Usage of static IP
+
+5. Listener configuration.
+

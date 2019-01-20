@@ -1,0 +1,13 @@
+awk is the command to extract a row or column from output
+
+like 
+
+cat file | awk {'print $4'}  ---> it will print 4th column
+
+ls-lrt | awk {'print $1 "\t" $2 "\t" $3} > test.txt
+
+
+for printing rows
+
+cat file | awk 'FNR==1 {print}' > file.text
+

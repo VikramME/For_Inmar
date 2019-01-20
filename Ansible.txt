@@ -1,0 +1,113 @@
+		Config Management - Ansible
+	---------------------------------------
+
+Ansible is used for provisioning, deploy,configure,scale and secure the servers.
+
+Difficult to manage thousands of servers with ansible we can manage easily through ssh configuration.
+
+In ansible we have playbook concept to do the work in easy way and automate.
+
+Smart automation is always worth in the market especially in production.
+
+Ansible we called it as configuration management and project management tool.
+
+simple to start
+
+scales up on demand
+
+No agents are needed.
+
+sshd on remote machine can be used.
+
+Playbook is Infrastructure as code as a file
+
+Module is a resource like file/package/command/service/copy ...etc to configure
+
+Components in Ansible
+---------------------
+Inventory: file contains list of hosts, groups or variables.
+
+Modules: Actually do the work 
+
+Handlers: call back actions, and other hooks
+
+Playbooks: Collection of plays 
+
+Plays: Loops over a list of takes mapped to list of hosts 
+
+Tasks: Invokes a module to do the work
+
+--------------------------------------------------------------------------------
+
+Ansible installation
+
+
+ssh-key has to setup on the nodes 
+
+Ansible server talks to managed nodes using ssh 
+
+Default location of inventory: /etc/ansible/hosts
+
+
+structure using ansible
+
+ansible inventory -m modulename
+
+ansible-playbook playbook.yml
+
+add hosts in /etc/ansible/hosts
+
+add groups of hosts in this file
+
+we have to generate ssh keys and setup password less authentication between server and clients 
+
+---------------------------------------------------------------
+
+some of ansible commands
+
+
+ansible all -m ping 
+
+ansible all -a "touch /tmp/hello"
+
+ansible all -i "localhost" -c local -m shell -a 'echo hello vikram'   --> local execution
+
+ansible all -i"ctxx1p3435" -m shell -a 'echo hello vikram' -->remote execution
+
+ansible webservers -m ping
+
+cat sample.yml
+
+---
+- hosts: webservers
+  become:yes
+
+  tasks:
+  - name: install httpd
+    yum: pkg=httpd state=installed
+
+    notify:
+      -	restart apache 
+
+     -name: start service
+      service: name=httpd state=started
+
+     handlres:
+      -name:restart apache
+       action:service name=httpd state=restarted
+
+
+============================================================================================================================
+
+For CI / CD i do use Jenkins 
+
+in jenkins i will configure ansible and do run jobs in it.
+
+
+     
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+Version Control --Git
+---------------------
+
+Git is now a days very much popular for version control and to maintain different versions of as a branching and easy to identify using tags.
+
+I do involve as my role in git is to clone the repository and creating branches and tags and commits with some code modifications from local to central repos.
+
+Most of the scenarios i do create poll scm jobs in jenkins by integrating with git.
+
+Once code got committed in my central repo i have to clone it.
+
+here i can give some commands.
+
+git init
+
+git clone  https://github.com/VikramME/For_Inmar.git --->for windows
+
+git clone ssh://github.com/VikramME/For_Inmar.git -->For linux
+
+git config --global user.email chvikram123@gmail.com
+
+git config --global user.name vikram
+
+ls -lrt
+
+git status
+
+touch file1 file2 file3
+
+git status
+
+git add .* or git add --all
+
+git commit -m "my commit"
+
+or 
+
+git commit -m --all "commit all"
+
+git log --oneline
+
+git push
+
+-------------------------------------------------------
+		Branching
+
+Branching is the great feature in Git version control system to make the difference of the commit code from devolopment teams.
+
+
+git branch branch1
+
+git status
+
+git pull 
+
+git checkout branch1
+
+git checkout master
+
+git checkout -b branch2
+
+git merge branch2
+
+git branch
+
+git add --all (under branch2)
+
+git commit --all -m "committing changes to branch called branch2"
+
+git checkout master
+
+git merge branch1
+
+if any conflict come during merging Conflict message will show like Merge conflict in filename
+
+to come out from conflict
+
+git merge --abort
+
+git branch --delete branch1 --> delete branch from local repo
+
+git push origin --delete branch1 --> delete from central repo
+
+
+git ls-tree -r --name-only master
+
+git ls-tree -r --name-only branch1
+
+git diff master:file1 branch1:file1
+
+git push -u origin master
+
+---------------------------------------------------------------------------------------
+
+		Tags
+	---------------------
+
+
+git log --oneline
+
+git tag v-1.0 --> this tag is for latest commit id
+
+git tag
+
+git show v-1.0
+
+git push origin v-1.0
+
+git log --oneline-6
+
+git tag
+
+git push --tags  --> to push all tags in centrol repo
+
+git tag -d v-1.0--> local delete
+
+git push origin -d v-1.0 --> origin delete
+
+git log --oneline -20
+
+git tag v-2.1 cid
+
+git tag
+
+git push origin v-2.1
+
+git tag
+
+
+-------------------------------------------------------
+
+		
+
+
+
+
+
+
+
+
+
+
